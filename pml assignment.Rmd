@@ -1,0 +1,39 @@
+---
+title: "PML assignment"
+author: "Lerh Shong"
+date: "November 13, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Objective
+The objective of this assignment is to predict the classe variable in this [dataset](http://groupware.les.inf.puc-rio.br/har).
+
+# Preliminary steps
+The following preprocessing steps were used:
+
+1. Removal of missing values - 
+There were 67 columns with missing values, and each of those columns have 19216 missing values. This is 98%
+of the dataset hence no imputation was done.
+
+2. Removal of near-zero variance columns -
+Numeric columns that had close to zero variance was removed, with the default settings of the nearZeroVar 
+function.
+
+3. Removal of non-numeric columns -
+The non-numeric columns were identifiers with the exception of actual time. As raw time was provided, actual time was removed as well.
+
+4. Scaling -
+Data was scaled for training.
+
+# Training the model
+The two methods used were xgbLinear and xgbTree, with 3-fold cross validation. These methods had an accuracy of 0.99. Either would be fine, though xgbLinear was chosen as it did slightly better in resampling.
+The expected out of sample error would be minimal based on the resampling plot.
+
+![](C:\Users\lerhshong\Desktop\For Elysium\Coursera\8. Practical Machine Learning\Rplot.png)
+
+
+
