@@ -33,7 +33,7 @@ Data was scaled for training.
 The two methods used were xgbLinear and xgbTree, with 3-fold cross validation. These methods had an accuracy of 0.99. Either would be fine, though xgbLinear was chosen as it did slightly better in resampling.
 The expected out of sample error would be minimal based on the resampling plot.
 
-![](C:\Users\lerhshong\Desktop\For Elysium\Coursera\8. Practical Machine Learning\Rplot.png)
+![](https://github.com/lerhshong/pml/blob/master/Rplot.png)
 
 
 
